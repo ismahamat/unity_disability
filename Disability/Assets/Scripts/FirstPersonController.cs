@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class FirstPersonController : MonoBehaviour
@@ -21,7 +21,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        // Déplacement souris (caméra)
+        // DÃ©placement souris (camÃ©ra)
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
@@ -30,14 +30,14 @@ public class FirstPersonController : MonoBehaviour
         cameraHolder.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        // Déplacement clavier
+        // DÃ©placement clavier
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        // gravité
+        // gravitÃ©
         isGrounded = controller.isGrounded;
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
