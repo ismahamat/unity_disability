@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MyopieScene.unity
+- path: Assets/Scenes/NystagmusScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
