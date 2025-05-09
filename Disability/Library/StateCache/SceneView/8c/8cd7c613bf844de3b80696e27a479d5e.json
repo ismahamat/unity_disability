@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-9.534171104431153,"y":1.8766670227050782,"z":0.8363659381866455},"rotation":{"x":0.10491436719894409,"y":0.4490219056606293,"z":-0.05318640545010567,"w":0.885748565196991},"size":2.2670485973358156,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":395.32305908203127,"y":209.43099975585938,"z":86.87568664550781},"rotation":{"x":-0.41087427735328677,"y":-0.0012684541288763285,"z":0.0005883935955353081,"w":-0.9117305874824524},"size":603.69189453125,"orthographic":false}
+>>>>>>> Nystagmus
