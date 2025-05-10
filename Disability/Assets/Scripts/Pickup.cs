@@ -8,6 +8,14 @@ public class Pickup : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        // Si l'objet est un Ticket, on le détruit
+        if (name == "Ticket")
+        {
+            Debug.Log("Ticket ramassé et détruit : " + itemName);
+            Destroy(gameObject);
+            return;
+        }
+
         // Récupère l'inventaire du joueur
         Inventory playerInventory = FindObjectOfType<Inventory>();
 
