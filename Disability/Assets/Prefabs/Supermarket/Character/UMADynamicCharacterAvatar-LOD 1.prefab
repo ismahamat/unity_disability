@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8347622395644224575}
   - component: {fileID: 2012691207783346300}
   - component: {fileID: 6063560795317704461}
-  - component: {fileID: 2412544320834070916}
+  - component: {fileID: 1218191696865487785}
   - component: {fileID: 8409001847268666052}
   m_Layer: 0
   m_Name: UMADynamicCharacterAvatar-LOD 1
@@ -1617,7 +1617,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!114 &2412544320834070916
+--- !u!114 &1218191696865487785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1626,11 +1626,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 341852265578735518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518ec23d12b61b74782e0dac820a103c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f8d8b2aff995f746b91d40496476afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.7
-  waypointsParent: {fileID: 0}
+  wanderRadius: 10
+  minWanderInterval: 8.91
+  maxWanderInterval: 48.29
 --- !u!95 &8409001847268666052
 Animator:
   serializedVersion: 5
