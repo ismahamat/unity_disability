@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public float GravityStrength;
     public float JumpStrength;
     public float WalkSpeed;
-    public float RunSpeed;
 
     private CharacterController controller;
     private Vector3 currentMoveVelocity;
@@ -33,11 +32,9 @@ public class PlayerMovement : MonoBehaviour
         {
             playerInput.Normalize();
         }
-
         // Calcul de la direction et de la vitesse
         Vector3 moveVector = transform.TransformDirection(playerInput);
-        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? RunSpeed : WalkSpeed;
-
+        float currentSpeed = WalkSpeed;
         // Lissage du mouvement
         currentMoveVelocity = Vector3.SmoothDamp(
             currentMoveVelocity,
@@ -45,29 +42,20 @@ public class PlayerMovement : MonoBehaviour
             ref moveDampVelocity,
             MoveSmoothTime
         );
-
         // Applique le mouvement
         controller.Move(currentMoveVelocity * Time.deltaTime);
-
         // Vérification si le joueur est au sol
         Ray groundCheckRay = new Ray(transform.position, Vector3.down);
         if (Physics.Raycast(groundCheckRay, 1.1f))
         {
             // Réinitialise la vitesse verticale
             currentForceVelocity.y = -2f;
-
-            // Saut
-            if (Input.GetKey(KeyCode.Space))
-            {
-                currentForceVelocity.y = JumpStrength;
-            }
         }
         else
         {
             // Applique la gravité
             currentForceVelocity.y -= GravityStrength * Time.deltaTime;
         }
-
         // Applique les forces verticales
         controller.Move(currentForceVelocity * Time.deltaTime);
     }

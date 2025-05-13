@@ -1,12 +1,10 @@
 using UnityEngine;
 
-// Interface pour les objets interactifs
 public interface IInteractable
 {
     void Interact();
 }
 
-// Script pour détecter les interactions
 public class Interactor : MonoBehaviour
 {
     public Transform InteractorSource;
@@ -14,12 +12,10 @@ public class Interactor : MonoBehaviour
 
     void Start()
     {
-        // Rien à initialiser ici pour l'instant
     }
 
     void Update()
     {
-        // Vérifie si on appuie sur la touche E
         if (Input.GetMouseButtonDown(0))
         {
             // Crée un Ray partant du InteractorSource
